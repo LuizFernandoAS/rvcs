@@ -12,8 +12,9 @@ namespace RVCS01.Class
         public static MySqlCommand Abrir()
         {
             MySqlCommand cmd = new MySqlCommand();
-            string strcon = @"server=10.91.43.20;user id=root;database=myescolarapp;password=@senac00";
+            string strcon = @"server=10.91.43.20;user id=root;database=myescolarapp;password=@senac";
             MySqlConnection cn = new MySqlConnection(strcon);
+            cn.Open();
             cmd.Connection = cn;
             return cmd;
         }    
